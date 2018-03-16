@@ -1,0 +1,53 @@
+---
+title: "carnegie"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  md_document:
+    toc: true      
+---
+
+```{r, echo=FALSE}
+desc <- suppressWarnings(readLines("DESCRIPTION"))
+regex <- "(^Version:\\s+)(\\d+\\.\\d+\\.\\d+)"
+loc <- grep(regex, desc)
+ver <- gsub(regex, "\\2", desc[loc])
+#verbadge <- sprintf('<a href="https://img.shields.io/badge/Version-%s-orange.svg"><img src="https://img.shields.io/badge/Version-%s-orange.svg" alt="Version"/></a></p>', ver, ver)
+verbadge <- ''
+````
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(knitr)
+knit_hooks$set(htmlcap = function(before, options, envir) {
+  if(!before) {
+    paste('<p class="caption"><b><em>',options$htmlcap,"</em></b></p>",sep="")
+    }
+    })
+knitr::opts_knit$set(self.contained = TRUE, cache = FALSE, fig.align = 'center')
+knitr::opts_chunk$set(fig.path = "tools/figure/")
+options(scipen=999)
+```
+
+
+[![Build Status](https://travis-ci.org/GITHUB_USERNAME/carnegie.svg?branch=master)](https://travis-ci.org/GITHUB_USERNAME/carnegie)
+[![Coverage Status](https://coveralls.io/repos/GITHUB_USERNAME/carnegie/badge.svg?branch=master)](https://coveralls.io/r/GITHUB_USERNAME/carnegie?branch=master)
+`r verbadge`
+
+**carnegie** is a data package for access to select Carnegie data.
+
+# Installation
+
+To download the development version of **carnegie**:
+
+Download the [zip ball](https://github.com/GITHUB_USERNAME/carnegie/zipball/master) or [tar ball](https://github.com/GITHUB_USERNAME/carnegie/tarball/master), decompress and run `R CMD INSTALL` on it, or use the **pacman** package to install the development version:
+
+```r
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load_current_gh("GITHUB_USERNAME/carnegie")
+```
+
+# Contact
+
+You are welcome to:    
+- submit suggestions and bug-reports at: <https://github.com/GITHUB_USERNAME/carnegie/issues>    
+- send a pull request on: <https://github.com/GITHUB_USERNAME/carnegie>    
+- compose a friendly e-mail to: <you@somewhere.net>    

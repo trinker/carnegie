@@ -1,0 +1,13 @@
+Package: carnegie
+Title: Carnegie Data
+Version: 0.0.1
+Authors@R: c(person("Tyler", "Rinker", email =
+        "tyler.rinker@gmail.com", role = c("aut", "cre")))
+Maintainer: Tyler Rinker <tyler.rinker@gmail.com>
+Description: Easy R access to Carnegie data set.
+Depends: R (>= 3.4.0)
+Date: 2018-03-16
+License: GPL-2
+LazyData: TRUE
+Roxygen: list(wrap = FALSE)
+RoxygenNote: 6.0.1
