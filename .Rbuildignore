@@ -16,3 +16,4 @@ README.R
 travis.yml
 inst/maintenance.R
 Thumb.db
+get_carnegie_data.R

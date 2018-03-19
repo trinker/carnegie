@@ -24,13 +24,13 @@
 #'   \item MSI. Minority serving institution flag
 #'   \item WOMENS. Women's college flag
 #'   \item MEDICAL. Institution grants a medical degree flag
-#'   \item NACT. Number of first-time entering students who submitted ACT score
-#'   \item NSAT. Number of first-time entering students who submitted SAT score
-#'   \item NSATACT. Combined number of students submitting SAT or ACT scores
 #'   \item ACTCAT. Final ACT category (1=inclusive; 2=selective; 3=more selective)
 #'   \item ROOMS. Total dormitory capacity (campus owned-, operated, or affiliated-housing)
 #'   \item FALLENR13. Total Fall 2013 enrollment
 #'   \item FALLENR14. Total Fall 2014 enrollment
+#'   \item SATV25. SAT-Verbal 25th percentile score
+#'   \item SATM25. SAT-Math 25th percentile score
+#'   \item SATCMB25. Combined SAT-Math and SAT-Verbal 25th percentils scores
 #'   \item UGDSFTF14. Undergraduate degree-seeking full-time enrollment, fall 2014
 #'   \item UGDSPTF14. Undergraduate degree-seeking part-time enrollment, fall 2014
 #'   \item UGNDFT14. Undergraduate non-degree full-time students, fall 2014
@@ -47,7 +47,7 @@
 #' @keywords datasets
 #' @name carnegie
 #' @usage data(carnegie)
-#' @format A data frame with 4,665 rows and 37 variables
+#' @format A data frame with 4,665 rows and 36 variables
 #' @references \url{http://carnegieclassifications.iu.edu}
 NULL
 
